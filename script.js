@@ -21,7 +21,7 @@ function createBookCard(title, author, pages, read, index) {
     let newCard = document.createElement('div');
     newCard.className = 'card';
     newCard.setAttribute('data-index', index);
-    newCard.innerHTML = `<h4>${title}</h4><p>by ${author}</p><p>${pages}</p><p>${read ? `✅ Read` : `☑️ Unread`}</p><a href="#" class='remove'>X</a>${index}`;
+    newCard.innerHTML = `<h4>${title}</h4><p>by ${author}</p><p>${pages}</p><p>${read ? `✅ Read` : `☑️ Unread`}</p><a href="#" class='remove'>X</a>`;
 
     return newCard;
 }
