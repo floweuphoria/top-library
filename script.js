@@ -1,11 +1,5 @@
 const myLibrary = [];
 
-// function Book(title, author, pages, read) {
-//   this.title = title;
-//   this.author = author;
-//   this.pages = pages;
-//   this.read = read;
-// }
 class Book {
   constructor(title, author, pages, read) {
     this.title = title;
@@ -59,7 +53,6 @@ function displayBooks() {
 }
 
 function clearBooks() {
-  console.log('clearing books');
   document.querySelector('.container').innerHTML = '';
 }
 
@@ -96,14 +89,12 @@ document.querySelector('.container').addEventListener('click', (e) => {
   if (e.target.className === 'remove-book') {
     e.target.parentNode.remove();
     myLibrary.splice(index, 1);
-    // console.log(myLibrary);
     displayBooks();
   }
   if (e.target.className === 'read') {
     myLibrary[index].read = !myLibrary[index].read;
     clearBooks();
     displayBooks();
-    console.log(myLibrary[index]);
   }
 })
 
